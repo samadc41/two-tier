@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+   frontend:
+         image: samad09/frontend
+         build:
+           context: ./frontend
+           target: build
+         ports:
+           - "8000:80"
+   backend:
+         build: ./backend
+         image: samad09/backend
+         ports:
+           - "5000:5000"       
+
