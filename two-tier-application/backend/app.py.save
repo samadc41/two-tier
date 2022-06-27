@@ -1,14 +1,13 @@
 from flask import Flask,jsonify,request
 from flask_cors import CORS
 app = Flask(__name__)
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+cors = CORS(app, resources={r"//*": {"origins": "*"}})
+
 @app.route('/')
 def hello_world():
     return 'Hello world'
 
-@app.route('/api',methods=['GET'])
-def api_serve():
-    return 'api serve'
+
 @app.route('/reverser',methods = ['POST'])
 def reverser():
     num = request.get_json().get("num")

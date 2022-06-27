@@ -1,9 +1,3 @@
-FROM node:14-buster-slim as devolop
-WORKDIR /frontend
-COPY . /frontend
-RUN npm install
-CMD [ "npm", "run", "start" ]
-
 FROM node:14-buster-slim as build
 WORKDIR /frontend
 COPY . /frontend

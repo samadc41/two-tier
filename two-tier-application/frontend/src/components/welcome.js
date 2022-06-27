@@ -7,7 +7,7 @@ export default class Welcome extends React.Component {
   }
 
   componentDidMount() {
-    axios.get(`https://backend22.azurewebsites.net`)
+    axios.get(`https://backend-service.yellowground-0d9dacb3.canadacentral.azurecontainerapps.io/api`)
       .then(res => {
         const welcome = res.data;
         this.setState({ welcome });
